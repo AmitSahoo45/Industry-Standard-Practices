@@ -31,7 +31,7 @@ In this scenario, sharding steps in as the superhero of scalability. Picture the
 #### How does Sharding work?
 In a sharded database system, data is strategically divided into shards based on predetermined criteria such as time, categories, location, or customer segments. Following partitioning, the data is distributed across multiple servers or nodes, with each server or node handling storage and processing for a specific subset of the data.
 
-To retrieve information from the sharded database, the system relies on a shard key—a unique identifier used to map data to its designated shard. When a query is initiated, the system utilizes the shard key to identify the shard containing the relevant data and then directs the query to the corresponding server or node.
+To retrieve information from the sharded database, the system relies on a shard key - a unique identifier used to map data to its designated shard. When a query is initiated, the system utilizes the shard key to identify the shard containing the relevant data and then directs the query to the corresponding server or node.
 
 This sharding mechanism enhances the system's scalability and performance by distributing the data processing workload among multiple servers, ensuring efficient data management and retrieval.
 
@@ -182,7 +182,7 @@ In contrast to horizontal partitioning, vertical partitioning segments the datas
 Hash-based partitioning involves scrutinizing data using a hash function to determine its designated division. The data undergoes the hash function, generating a hash value that dictates the categorization into a specific partition. This method, by distributing data randomly across partitions, aids in load balancing and expedites data retrieval. Hash-based partitioning is particularly effective in scenarios where a dynamic and balanced distribution of data is crucial for optimal system functioning.
 
 - **Key-based Partitioning:**
-In key-based partitioning, data is systematically divided based on a specific key or attribute value, providing a structured approach to dataset organization. Each partition is designed to encompass all data associated with a particular key value. This method finds frequent application in distributed databases or systems where even distribution of data is crucial for optimal performance. Key-based partitioning facilitates efficient data retrieval through key lookups, streamlining the process and ensuring that relevant information is readily accessible. 
+In key-based partitioning, data is systematically divided based on a specific key or attribute value, providing a structured approach to dataset organization. Each partition is designed to encompass all data associated with a particular key value. This method finds frequent application in distributed databases or systems where even distribution of data is crucial for optimal performance. Key-based partitioning facilitates efficient data retrieval through key lookups, streamlining the process and ensuring that relevant information is readily accessible.  
 
 
 
