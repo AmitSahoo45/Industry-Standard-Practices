@@ -1,0 +1,23 @@
+{
+  "name": "cookie-based-auth",
+  "version": "1.0.1",
+  "description": "cookie based auth",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Amit Kumar Sahoo",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "http-status-codes": "^2.3.0",
+    "mongoose": "^8.3.4",
+    "nodemon": "^3.1.0",
+    "validator": "^13.12.0"
+  }
+}
