@@ -1,0 +1,91 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\p76-industry-standard-practices\\012-Why-and-How-To-Rate-limit-API\\ratelimiting\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{50695039-1FBC-4CD3-9286-9226547DDB0D}|ratelimiting\\ratelimiting.csproj|d:\\p76-industry-standard-practices\\012-why-and-how-to-rate-limit-api\\ratelimiting\\ratelimiting\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50695039-1FBC-4CD3-9286-9226547DDB0D}|ratelimiting\\ratelimiting.csproj|solutionrelative:ratelimiting\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50695039-1FBC-4CD3-9286-9226547DDB0D}|ratelimiting\\ratelimiting.csproj|d:\\p76-industry-standard-practices\\012-why-and-how-to-rate-limit-api\\ratelimiting\\ratelimiting\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50695039-1FBC-4CD3-9286-9226547DDB0D}|ratelimiting\\ratelimiting.csproj|solutionrelative:ratelimiting\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50695039-1FBC-4CD3-9286-9226547DDB0D}|ratelimiting\\ratelimiting.csproj|d:\\p76-industry-standard-practices\\012-why-and-how-to-rate-limit-api\\ratelimiting\\ratelimiting\\data\\seeddata.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{50695039-1FBC-4CD3-9286-9226547DDB0D}|ratelimiting\\ratelimiting.csproj|solutionrelative:ratelimiting\\data\\seeddata.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50695039-1FBC-4CD3-9286-9226547DDB0D}|ratelimiting\\ratelimiting.csproj|d:\\p76-industry-standard-practices\\012-why-and-how-to-rate-limit-api\\ratelimiting\\ratelimiting\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50695039-1FBC-4CD3-9286-9226547DDB0D}|ratelimiting\\ratelimiting.csproj|solutionrelative:ratelimiting\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50695039-1FBC-4CD3-9286-9226547DDB0D}|ratelimiting\\ratelimiting.csproj|d:\\p76-industry-standard-practices\\012-why-and-how-to-rate-limit-api\\ratelimiting\\ratelimiting\\data\\seeddata.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{50695039-1FBC-4CD3-9286-9226547DDB0D}|ratelimiting\\ratelimiting.csproj|solutionrelative:ratelimiting\\data\\seeddata.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "D:\\p76-industry-standard-practices\\012-Why-and-How-To-Rate-limit-API\\ratelimiting\\ratelimiting\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "ratelimiting\\Controllers\\EmployeeController.cs",
+              "ToolTip": "D:\\p76-industry-standard-practices\\012-Why-and-How-To-Rate-limit-API\\ratelimiting\\ratelimiting\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "ratelimiting\\Controllers\\EmployeeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T15:42:57.534Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "D:\\p76-industry-standard-practices\\012-Why-and-How-To-Rate-limit-API\\ratelimiting\\ratelimiting\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "ratelimiting\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "D:\\p76-industry-standard-practices\\012-Why-and-How-To-Rate-limit-API\\ratelimiting\\ratelimiting\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "ratelimiting\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T13:59:13.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "seedData.sql ",
+              "DocumentMoniker": "D:\\p76-industry-standard-practices\\012-Why-and-How-To-Rate-limit-API\\ratelimiting\\ratelimiting\\Data\\seedData.sql",
+              "RelativeDocumentMoniker": "ratelimiting\\Data\\seedData.sql",
+              "ToolTip": "D:\\p76-industry-standard-practices\\012-Why-and-How-To-Rate-limit-API\\ratelimiting\\ratelimiting\\Data\\seedData.sql",
+              "RelativeToolTip": "ratelimiting\\Data\\seedData.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-09-29T13:36:49.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "D:\\p76-industry-standard-practices\\012-Why-and-How-To-Rate-limit-API\\ratelimiting\\ratelimiting\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "ratelimiting\\Models\\Employee.cs",
+              "ToolTip": "D:\\p76-industry-standard-practices\\012-Why-and-How-To-Rate-limit-API\\ratelimiting\\ratelimiting\\Models\\Employee.cs",
+              "RelativeToolTip": "ratelimiting\\Models\\Employee.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAiwA4AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T08:46:27.396Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
