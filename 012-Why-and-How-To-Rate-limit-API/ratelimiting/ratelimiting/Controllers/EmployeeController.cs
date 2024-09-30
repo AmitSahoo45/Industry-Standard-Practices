@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ratelimiting.Database;
 using ratelimiting.Models;
@@ -17,9 +18,11 @@ namespace ratelimiting.Controllers
             _dbContext = dbContext;
         }
 
-        // GET: api/employee
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Employee>>> GetAllEmployees()
+        // Get all employees using "Fixed Window" rate limiting
+        // api route
+        //[Authorize]
+        [HttpGet("fixed-window")]
+        public async Task<ActionResult<IEnumerable<Employee>>> GetAllEmployees_Fixed_Window()
         {
             return await _dbContext.Employees.ToListAsync();
         }

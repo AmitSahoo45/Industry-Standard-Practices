@@ -1,8 +1,40 @@
 [
   {
+    "ContainingType": "ratelimiting.Controllers.AuthenticationController",
+    "Method": "Login",
+    "RelativePath": "api/Authentication/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "ratelimiting.Models.Login",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ratelimiting.Controllers.AuthenticationController",
+    "Method": "Register",
+    "RelativePath": "api/Authentication/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "ratelimiting.Models.Register",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ratelimiting.Controllers.EmployeeController",
-    "Method": "GetAllEmployees",
-    "RelativePath": "api/Employee",
+    "Method": "GetAllEmployees_Fixed_Window",
+    "RelativePath": "api/Employee/fixed-window",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
