@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 
 namespace ratelimiting.Controllers
 {
@@ -18,6 +19,7 @@ namespace ratelimiting.Controllers
             _logger = logger;
         }
 
+        [EnableRateLimiting("FixedWindowPolicy")]
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
