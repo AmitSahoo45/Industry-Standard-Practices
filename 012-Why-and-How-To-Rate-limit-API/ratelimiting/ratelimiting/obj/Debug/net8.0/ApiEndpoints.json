@@ -17,6 +17,16 @@
   },
   {
     "ContainingType": "ratelimiting.Controllers.AuthenticationController",
+    "Method": "Logout",
+    "RelativePath": "api/Authentication/logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ratelimiting.Controllers.AuthenticationController",
     "Method": "Register",
     "RelativePath": "api/Authentication/register",
     "HttpMethod": "POST",
@@ -35,6 +45,26 @@
     "ContainingType": "ratelimiting.Controllers.EmployeeController",
     "Method": "GetAllEmployees_Fixed_Window",
     "RelativePath": "api/Employee/fixed-window",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ratelimiting.Models.Employee, ratelimiting, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ratelimiting.Controllers.EmployeeController",
+    "Method": "GetAllEmployees_Sliding_Window",
+    "RelativePath": "api/Employee/sliding-window",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

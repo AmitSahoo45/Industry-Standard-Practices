@@ -6,6 +6,7 @@ using ratelimiting.Database;
 using System.Text;
 using System.Threading.RateLimiting;
 using Microsoft.AspNetCore.RateLimiting;
+using ratelimiting.Helper;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,8 +21,8 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
     options.Password.RequireUppercase = false;
     options.Password.RequireLowercase = true;
 })
-.AddEntityFrameworkStores<ApplicationDbContext>()
-.AddDefaultTokenProviders();
+    .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddDefaultTokenProviders();
 
 builder.Services.AddAuthentication(options =>
 {
@@ -30,80 +31,56 @@ builder.Services.AddAuthentication(options =>
 })
 .AddJwtBearer(options =>
 {
+    var key = Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]);
+
     options.TokenValidationParameters = new TokenValidationParameters
     {
         ValidateIssuer = true,
         ValidateAudience = true,
-        ValidateLifetime = true,
+        ValidateLifetime = true, 
         ValidateIssuerSigningKey = true,
-        ValidIssuer = builder.Configuration["Jwt:Issuer"], 
-        ValidAudience = builder.Configuration["Jwt:Issuer"],
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"])) 
+        ValidIssuer = builder.Configuration["Jwt:Issuer"],
+        ValidAudience = builder.Configuration["Jwt:Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(key)
+    };
+
+    options.Events = new JwtBearerEvents
+    {
+        OnMessageReceived = context =>
+        {
+            if (context.Request.Cookies.ContainsKey("jwtToken"))
+            {
+                context.Token = context.Request.Cookies["jwtToken"];
+            }
+            return Task.CompletedTask;
+        }
     };
 });
 
 builder.Services.AddControllers();
 
-// This is the rate limiting middleware. 
-// We are applying this globally. 
-// By setting options.GlobalLimiter, you define a rate limiter that applies to all requests globally.
-// The partitionKey can be any string since we're applying the same limit to all requests.
-//builder.Services.AddRateLimiter(options =>
-//{
-//    options.GlobalLimiter = PartitionedRateLimiter.Create<HttpContext, string>(httpContext =>
-//        RateLimitPartition.GetFixedWindowLimiter(
-//            partitionKey: "GlobalPolicy", 
-//            factory: _ => new FixedWindowRateLimiterOptions
-//            {
-//                Window = TimeSpan.FromMinutes(1),
-//                PermitLimit = 2,
-//                QueueProcessingOrder = QueueProcessingOrder.OldestFirst,
-//                QueueLimit = 1,
-//            }));
-
-//    // The response when rate limit is exceeded
-//    options.OnRejected = async (context, cancellationToken) =>
-//    {
-//        context.HttpContext.Response.StatusCode = StatusCodes.Status429TooManyRequests;
-//        await context.HttpContext.Response.WriteAsync("Too many requests. Please try again later.", cancellationToken);
-//    };
-//});
-
-// implementing fixed window rate limiting of specific route 
-builder.Services.AddRateLimiter(options =>
+builder.Services.AddRateLimiter(opts =>
 {
-    // Define a named policy called "FixedWindowPolicy"
-    options.AddPolicy("FixedWindowPolicy", context =>
-        RateLimitPartition.GetFixedWindowLimiter(
-            partitionKey: context.Connection.RemoteIpAddress?.ToString() ?? "UnknownIP",
-            factory: key => new FixedWindowRateLimiterOptions
-            {
-                Window = TimeSpan.FromMinutes(1),
-                PermitLimit = 2,
-                QueueProcessingOrder = QueueProcessingOrder.OldestFirst,
-                QueueLimit = 1,
-            }));
+    opts.AddPolicy("SlidingWindowPolicy", ctx =>
+    RateLimitPartition.GetSlidingWindowLimiter(
+        partitionKey: Functions.GetPartitionKey(ctx),
+        factory: key => new SlidingWindowRateLimiterOptions
+        {
+            PermitLimit = 2,
+            Window = TimeSpan.FromMinutes(1),
+            SegmentsPerWindow = 6,
+            QueueProcessingOrder = QueueProcessingOrder.OldestFirst,
+            QueueLimit = 1
+        }));
 
-    // The response when the rate limit is exceeded
-    options.OnRejected = async (context, cancellationToken) =>
+    opts.OnRejected = async (context, cancellationToken) =>
     {
         context.HttpContext.Response.StatusCode = StatusCodes.Status429TooManyRequests;
         await context.HttpContext.Response.WriteAsync("Too many requests. Please try again later.", cancellationToken);
     };
 });
-// Explaination: Instead of using the global rate limiter, we are using a named policy called "FixedWindowPolicy". 
-// you are defining a named policy - "options.AddPolicy". This allows you to apply rate limiting selectively to specific endpoints.
-// The AddPolicy is defining a named rate-limiting policy called "FixedWindowPolicy".
-// The partitionKey uses the client's IP address to uniquely identify the requester. This ensures that rate limiting is applied per IP.
-// The `FixedWindowRateLimiterOptions` configures the fixed window size, permit limit, and queue settings.
-
 
 var app = builder.Build();
-
-// This way we are adding the rate limiting middleware to the pipeline.
-// This ensures rate limiting is applied to all requests.
-// The middleware will prevent excessive requests by clients and respond with a 429 status code when the limit is exceeded.
-app.UseRateLimiter();
 
 app.Lifetime.ApplicationStarted.Register(() =>
 {
@@ -125,6 +102,8 @@ app.Lifetime.ApplicationStarted.Register(() =>
         Console.WriteLine($"Error seeding database: {ex.Message}");
     }
 });
+
+app.UseRateLimiter();
 
 app.UseAuthentication();
 app.UseAuthorization();

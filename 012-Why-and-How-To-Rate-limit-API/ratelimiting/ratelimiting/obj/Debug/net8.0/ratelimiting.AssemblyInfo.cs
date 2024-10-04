@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ratelimiting")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9eae8a417ad3b1b3a20cf7223a923737caf560d8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e96120a40cfc0d9eec0dc87d9e6e4b4bf5d71e9d")]
 [assembly: System.Reflection.AssemblyProductAttribute("ratelimiting")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ratelimiting")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

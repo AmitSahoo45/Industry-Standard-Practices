@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.RateLimiting;
 
@@ -19,7 +20,8 @@ namespace ratelimiting.Controllers
             _logger = logger;
         }
 
-        [EnableRateLimiting("FixedWindowPolicy")]
+        // [EnableRateLimiting("FixedWindowPolicy")]
+        [Authorize]
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
