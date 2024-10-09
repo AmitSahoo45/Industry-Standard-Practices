@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "82ud8UR9erpvMiQi36lqQkZQa6hZDeULPj5dEVhD314=",
+  "Source": "rateLimitingTokenBucket",
+  "BasePath": "_content/rateLimitingTokenBucket",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

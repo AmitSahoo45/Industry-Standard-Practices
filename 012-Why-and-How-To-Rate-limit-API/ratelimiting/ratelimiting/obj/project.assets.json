@@ -4004,9 +4004,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\p76-industry-standard-practices\\012-Why-and-How-To-Rate-limit-API\\ratelimiting\\ratelimiting\\ratelimiting.csproj",
-      "projectName": "ratelimiting",
-      "projectPath": "D:\\p76-industry-standard-practices\\012-Why-and-How-To-Rate-limit-API\\ratelimiting\\ratelimiting\\ratelimiting.csproj",
+      "projectUniqueName": "D:\\p76-industry-standard-practices\\012-Why-and-How-To-Rate-limit-API\\ratelimiting\\ratelimiting\\ratelimitingSlidingWindow.csproj",
+      "projectName": "ratelimitingSlidingWindow",
+      "projectPath": "D:\\p76-industry-standard-practices\\012-Why-and-How-To-Rate-limit-API\\ratelimiting\\ratelimiting\\ratelimitingSlidingWindow.csproj",
       "packagesPath": "C:\\Users\\KIIT\\.nuget\\packages\\",
       "outputPath": "D:\\p76-industry-standard-practices\\012-Why-and-How-To-Rate-limit-API\\ratelimiting\\ratelimiting\\obj\\",
       "projectStyle": "PackageReference",

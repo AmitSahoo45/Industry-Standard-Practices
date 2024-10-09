@@ -1,0 +1,6 @@
+@rateLimitingFixedWindow_HostAddress = http://localhost:5298
+
+GET {{rateLimitingFixedWindow_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

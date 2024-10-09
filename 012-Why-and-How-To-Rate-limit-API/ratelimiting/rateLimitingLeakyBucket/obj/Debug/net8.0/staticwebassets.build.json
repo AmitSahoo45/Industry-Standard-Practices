@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "RDmF6mGccjK2llOXoMkYyCl8a5I/vpQPFFdLed3a3L4=",
+  "Source": "rateLimitingLeakyBucket",
+  "BasePath": "_content/rateLimitingLeakyBucket",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
