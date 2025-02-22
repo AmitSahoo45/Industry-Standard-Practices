@@ -1,3 +1,11 @@
 012-Why-and-How-To-Rate-limit-API/ratelimiting/.vs
 
 012-Why-and-How-To-Rate-limit-API/ratelimiting/ratelimiting/bin
+
+**/obj/
+obj/
+**/bin/
+bin/
+
+
+**/obj/Debug/

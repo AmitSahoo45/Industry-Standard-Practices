@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("rateLimitingFixedWindow")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3c8bc160008985d13d326cddca21b90c10b7f816")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6da102a630207a6c90f6a61e0dd887ae2030113e")]
 [assembly: System.Reflection.AssemblyProductAttribute("rateLimitingFixedWindow")]
 [assembly: System.Reflection.AssemblyTitleAttribute("rateLimitingFixedWindow")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

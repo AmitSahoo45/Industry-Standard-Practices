@@ -13,7 +13,6 @@ namespace ratelimiting.Controllers
     {
         private readonly ApplicationDbContext _dbContext;
 
-        // The constructor should be public so that the DI container can instantiate it
         public EmployeeController(ApplicationDbContext dbContext)
         {
             _dbContext = dbContext;
